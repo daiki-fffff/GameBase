@@ -6,10 +6,10 @@
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :posts
+- has_many :impressions
 - has_many :comments
 
-## postsテーブル
+## impressionテーブル
 |Column|Type|Options|
 |------|----|-------|
 |title|text|null: false|
@@ -18,8 +18,9 @@
 ### Association
 - belongs_to :users
 - has_many :comments
-- has_many :post_tags
-- has_many :tags, through: :posts_tags
+- has_many :impressions_tags
+- has_many :tags, through: :impression_tags
+
 
 
 ## commentsテーブル
@@ -28,7 +29,7 @@
 |text|text|null :false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :post
+- belongs_to :impression
 - belongs_to :user
 
 
@@ -37,26 +38,15 @@ Column|Type|Options|
 |------|----|-------|
 |text|text||
 ### Association
-- has_many :posts_tags
-- has_many :posts, through: :posts_tags
+- has_many :impressions_tags
+- has_many :impressions, through: :impression_tags
 
 
-## posts_tagsテーブル
+## impressions_tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |post_id|integer|null: false, foreign_key: true|
 |tag_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :post
+- belongs_to :impression
 - belongs_to :tag
-
-
-
-
-
-
-
-
-
-
-

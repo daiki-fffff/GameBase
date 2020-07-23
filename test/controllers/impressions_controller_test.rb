@@ -5,5 +5,4 @@ class ImpressionsControllerTest < ActionDispatch::IntegrationTest
     get impressions_index_url
     assert_response :success
   end
-
 end
