@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'tops/index'
+  root 'tops#index'
   resources :impressions, only:[:index, :create]
   resources :tops, only:[:index]
   get '/users/logout', 'users#logout'
