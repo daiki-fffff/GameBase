@@ -1,0 +1,19 @@
+.Header{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 50px;
+}
+
+.ImpressionField{
+  box-sizing: border-box;
+  overflow: scroll;
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+}
+
+.gametitle{
+  height: 20px;
+}

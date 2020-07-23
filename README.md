@@ -22,6 +22,7 @@
 - has_many :tags, through: :impression_tags
 
 
+
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
