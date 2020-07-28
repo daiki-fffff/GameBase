@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'tops#index'
   resources :impressions, only:[:index, :create]
   resources :tops, only:[:index]
-  get '/users/logout', 'users#logout'
+  get '/users/logout', to: 'users#logout'
 end
 
