@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'tops#index'
-  resources :impressions, only:[:index, :create]
+  root to: 'impressions#index'
+  resources :impressions, only:[:index, :create, :new]
   resources :tops, only:[:index]
+  resources :users, only:[:new, :create, :edit, :destroy, :update, :show]
   get '/users/logout', to: 'users#logout'
 end
 

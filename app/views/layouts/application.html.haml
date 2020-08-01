@@ -7,18 +7,18 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  -# %body
-  -#   %header
-  -#     %nav
-  -#       %if user_signd_in?
-  -#       -# %strong 
-  -#       -#   = link_to current_user.username,pages_show_path
-  -#       = link_to 'プロフィール変更'
-  -#       = link_to 'ログアウト'
-  -#     %else
-  -#       = link_to 'サインアップ'
-  -#       = link_to 'ログイン'
-  -#       %end
+  %body
+    -# %header
+    -#   %nav
+    -#     %if user_signd_in?
+    -#     %strong 
+    -#       = link_to current_user.username,pages_show_path
+    -#     = link_to 'プロフィール変更'
+    -#     = link_to 'ログアウト'
+    -#   %else
+    -#     = link_to 'サインアップ'
+    -#     = link_to 'ログイン'
+    -#     %end
 
     
     %p.notice = notice
