@@ -1,5 +1,6 @@
 class ImpressionsController < ApplicationController
   def index
+    # 投稿データすべてを取得、またインスタンス変数なのでViewで参照可能
     @impressions = Impression.all
   end
 
@@ -40,6 +41,12 @@ class ImpressionsController < ApplicationController
       flash[:alert] = "削除できませんでした。"
       redirect_to root_url
     end
+  end
+
+  private
+
+  def impression_params
+    params.require(:impression).permit(:title, :text)
   end
 
 end
