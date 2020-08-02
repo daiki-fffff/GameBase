@@ -1,6 +1,26 @@
-投稿フォーム
-%h1 投稿者名
-%h2 ゲームタイトル
-%h3 投稿内容
-.footer
-  = link_to "もどる", impressions_path
+-#投稿フォーム
+.Header  
+  .Body
+    %h1 投稿
+    = form_for @impression do |f|
+      .Form-group
+        %label ニックネーム
+        %span 必須
+        //=f.text_field :nickname
+    
+      .Form-group
+        %label ゲームタイトル
+        %span 必須
+        = f.text_field :title 
+
+      .Form-group
+        %label 感想
+        %span 必須
+        %br
+        = f.text_area :text
+      
+      .Btn
+        = f.submit '投稿する', class:'btn'
+
+    .Footer
+      = link_to "投稿一覧へ", impressions_path, class:'back-btn'
