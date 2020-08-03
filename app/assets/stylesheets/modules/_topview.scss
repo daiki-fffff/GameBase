@@ -1,0 +1,40 @@
+.Head {
+  padding: 30px 300px;
+  .Body {
+    .Contents.row {
+      .Content_post {
+        margin-top: 30px;
+      
+        &__title {
+          margin-bottom: 10px;
+        }
+      }
+
+    }
+  }
+
+  .Footer {
+    a {
+      display: block;
+      width: 100%;
+      background-color: #EFEFEF;
+      color: black;
+      padding: 5 0px;
+      margin-top: 20px;
+      text-align: center;
+      border: 1px solid;
+      border-radius: 3px;
+      text-decoration: none;
+      font-family: inherit;
+    }
+  }
+
+
+
+
+
+
+
+
+
+}

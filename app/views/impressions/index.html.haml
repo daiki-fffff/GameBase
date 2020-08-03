@@ -1,27 +1,19 @@
 //投稿すべてを表示する
 .Top
   = render "header"
+.Head
+  .Body
+    .Contents.row
+      - @impressions.each do |impression|
+        .Content_post
+          .Content_post__title
+            %label ゲームタイトル
+            %p=impression.title
+          .Content_post__text
+            %label 感想
+            %p= impression.text
+            //= simple_format(text_area)
 
-こんにちは
-トップページです。
-こちらのアプリは、ゲームについて好き勝手に発言できるサイトです。
-Geforce  nowのように月額制でスマートフォンでゲームができる。
-ゲームをしなっかた人がするようになる。
-面白くなかったら他のゲームをすぐにできる。
-やれるゲームが多すぎる。
-何をしたら良いかわからない。
-結果すぐやめてします。
-そんなひとに、続けてもらえるように面白いゲームを見つけてもらうレビューサイト。
-
-
-.contents.row
-  - @impressions.each do |impression|
-    .content_post
-      %p=impression.title
-      %span 
-      = impression.text
-
-.footer
-  //- if user_signed_in?
-  = link_to "投稿する", new_impression_path
-  = link_to "もどる"
+  .Footer
+    //- if user_signed_in?
+    = link_to "投稿フォームへ", new_impression_path

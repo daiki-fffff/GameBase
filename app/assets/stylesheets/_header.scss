@@ -1,0 +1,17 @@
+.Top{
+  margin: 0 50px;
+  .Nav {
+    ul.Userlist {
+      display: flex;
+      float: right;
+      a {
+        text-decoration: none;
+      }
+      li.Userlist {
+        &__login{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
