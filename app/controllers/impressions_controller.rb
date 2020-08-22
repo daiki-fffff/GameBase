@@ -1,11 +1,17 @@
 class ImpressionsController < ApplicationController
   def index
-    # 投稿データすべてを取得、またインスタンス変数なのでViewで参照可能
-    @impressions = Impression.all
+    if params[:user_id]
+      @user = User.find_by(params[:user_id])
+      @impressiions = @user.impressions
+    else
+      # 投稿データすべてを取得、またインスタンス変数なのでViewで参照可能
+      @impressions = Impression.all
+    end
   end
 
   def show
-    @impression = Impression.find(params[:id])
+    @impression = Impression.find_by(id: params[:id])
+    @user = User.find_by(id: @impression.user_id)
   end
 
   def new 
@@ -44,9 +50,8 @@ class ImpressionsController < ApplicationController
   end
 
   private
-
   def impression_params
-    params.require(:impression).permit(:title, :text)
+    params.require(:impression).permit(:title, :text).merge(user_id: current_user.id)
   end
 
 end
