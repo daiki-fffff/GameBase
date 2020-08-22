@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show 
+    @user = User.where(user_id: current_user.id)
   end
 
   def edit
