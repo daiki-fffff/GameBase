@@ -11,8 +11,7 @@
             %p=impression.title
           .Content_post__text
             %label 感想
-            %p= impression.text
-            //= simple_format(text_area)
+            %p=simple_format(impression.text)
 
   .Footer
     //- if user_signed_in?
