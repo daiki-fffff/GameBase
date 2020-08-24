@@ -1,10 +1,12 @@
 //投稿すべてを表示する
 .Head {
   padding: 30px 300px;
-  // margin: 0 50px;
   .Body {
     .Contents.row {
       .Content_post {
+        &__nickname{
+          margin-bottom: 10px;
+        }
         margin-top: 30px;
         border-bottom: 1px solid;
         &__title {

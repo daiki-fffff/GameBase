@@ -1,4 +1,6 @@
 class ImpressionsController < ApplicationController
+  #before_action :ensure_correct_user,{only: [:edit,:update,:destory]}
+
   def index
     if params[:user_id]
       @user = User.find_by(params[:user_id])
@@ -10,8 +12,8 @@ class ImpressionsController < ApplicationController
   end
 
   def show
-    @impression = Impression.find_by(id: params[:id])
-    @user = User.find_by(id: @impression.user_id)
+    @impression = Impression.find(params[:id])
+    @user = User.find(@impression.user_id)
   end
 
   def new 
@@ -20,6 +22,7 @@ class ImpressionsController < ApplicationController
     else
       redirect_to new_user_session_path
     end
+    @post = current_user.impressions.build
   end
 
   def create

@@ -4,11 +4,6 @@
     %h1 投稿
     = form_for (@impression) do |f|
       .Form-group
-        %label ニックネーム
-        %span 必須
-        //=f.text_field :nickname
-    
-      .Form-group
         %label ゲームタイトル
         %span 必須
         = f.text_field :title 

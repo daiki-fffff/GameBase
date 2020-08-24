@@ -6,13 +6,23 @@
     .Contents.row
       - @impressions.each do |impression|
         .Content_post
+          .Content_post__nickname
+            %label 投稿者
+            %p=impression.user.nickname
+            //=link_to(impression.user.nickname,"/impressions/#{impression.id}")  
+
           .Content_post__title
             %label ゲームタイトル
             %p=impression.title
           .Content_post__text
             %label 感想
             %p=simple_format(impression.text)
-
+      
+        .Content.btn
+          = link_to "編集する"
+        -# - if user_signed_in? && current_user.id == @impression.user_id
+          -# = link_to "編集する", edit_impression_path(@impression.id),class:"impression-details-edit__btn"
+          -# = link_to "削除する", impression_path(@impression.id), method: :delete,class:"impression-details-delete__btn"    
   .Footer
-    //- if user_signed_in?
     = link_to "投稿フォームへ", new_impression_path
+
