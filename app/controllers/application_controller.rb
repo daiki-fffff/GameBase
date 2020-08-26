@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # def after_sign_out_path_for(resource)
+  #   impressions_path
+  # end
+
   def configure_permitted_parameters
     added_attrs = [ :nickname,
                     :email,
