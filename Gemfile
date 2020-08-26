@@ -62,3 +62,7 @@ gem 'font-awesome-sass'
 source 'https://rubygems.org'
 
 gem 'devise'
+
+gem 'rails-i18n'
+
+gem 'devise-i18n-views'

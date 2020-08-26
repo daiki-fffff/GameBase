@@ -1,15 +1,15 @@
-.Body
+.Impression_body
   = form_for (@impression) do |f|
     .Form-group
       %label ゲームタイトル
-      %span 必須
+      = f.label :*, class: "Prerequisite" 
       = f.text_field :title 
 
     .Form-group
-      %label 感想
-      %span 必須
+      %label 感想 
+      %label 1~1000文字まで入力できます。
+      = f.label :*, class: "Prerequisite"
       = f.text_area :text
-    
     .Btn
       = f.submit '投稿する', class:'btn'
 

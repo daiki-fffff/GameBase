@@ -1,11 +1,15 @@
 //投稿フォームのscss
 .Header {
   margin: 0 50px;
-  .Body {
-    h1 {
-      font-size: 24px;
-    }
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .Impression_body {
     .Form-group{
+      label.Prerequisite{
+        color: red;
+      }
       margin-top: 20px;
       input {
         display: block;

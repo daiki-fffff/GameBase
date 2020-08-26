@@ -8,6 +8,14 @@
     color: red;
   } 
 }
+@mixin btnset() {
+  height: 50px;
+  width: 343px;
+  background-color: #3CCACE;
+  color: white;
+  border: honeydew;
+  margin-bottom: 30px;
+}
 
 .Body { 
   background-color: #f5f5f5;
@@ -15,7 +23,7 @@
   .new_user {
     text-align: center;
     font-size: 26px;
-    height: 100vh;
+    height: 100%;
   } 
 
   .information {
@@ -40,23 +48,29 @@
     .actions {
       padding-top: 40px;
       background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .submit {
+        height: 50px;
+        width: 343px;
+        background-color: #3CCACE;
+        color: white;
+        border: honeydew;
+        margin-bottom: 30px;
+      }
+      a.back-btn {
+        @include btnset();
+        text-decoration: none;
+      }
     }
-    .submit {
-      height: 50px;
-      width: 343px;
-      height: 50px;
-      background-color: #3CCACE;
-      color: white;
-      border: honeydew;
-      margin-bottom: 60px;
-    }
+    
   }
 
 
   .Footer {
     background-color: #f5f5f5;
     width: 100vw;
-    height: 128px;
   }
 }
 

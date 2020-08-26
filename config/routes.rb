@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'impressions#index'
   resources :impressions, only:[:index, :create, :new, :edit, :update, :delette]
-  resources :tops, only:[:index]
   resources :users, only:[:new, :create, :edit, :update, :show]
   # マイページ表示
   # get '/users/:id', to: 'users#show'
@@ -13,6 +12,6 @@ Rails.application.routes.draw do
   delete 'impressions/:id', to: 'impressions#destroy'
   post 'impressions/:id/update', to: 'impressions#update'
 
-  get '/users/logout', to: 'users#logout'
+  #get '/users/logout', to: 'users#logout'
 end
 

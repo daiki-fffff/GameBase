@@ -2,7 +2,7 @@
 .Top
   = render "header"
 .Head
-  .Body
+  .Index_body
     .Contents.row
       - @impressions.each do |impression|
         .Content_post
@@ -19,10 +19,11 @@
             %p=simple_format(impression.text)
       
         .Content.btn
-        - if impression.user_id == current_user.id
+        - if user_signed_in? && current_user.id == impression.user_id
           = link_to "編集する","/impressions/#{impression.id}/edit", method: :get
           = link_to "削除する","/impressions/#{impression.id}", method: :delete
           
   .Footer
     = link_to "投稿フォームへ", new_impression_path
+
 

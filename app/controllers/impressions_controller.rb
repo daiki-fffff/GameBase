@@ -21,7 +21,6 @@ class ImpressionsController < ApplicationController
     else
       redirect_to new_user_session_path
     end
-    @post = current_user.impressions.build
   end
 
   def create

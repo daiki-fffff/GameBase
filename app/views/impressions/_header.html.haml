@@ -3,8 +3,8 @@
     %ul.Userlist
       %li.Userlist__login
         = link_to "ログアウト", destroy_user_session_path, method: :delete
-      %li.Userlist__new
-        = link_to  "マイページ", user_path(current_user), class: "post", "turbolinks": false
+      -# %li.Userlist__new
+      -#   = link_to  "マイページ", user_path(current_user), class: "post", "turbolinks": false
   - else
     %ul.Userlist
       %li.Userlist__login
