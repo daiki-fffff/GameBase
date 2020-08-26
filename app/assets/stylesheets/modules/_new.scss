@@ -25,21 +25,22 @@
         height: 30px;
       }
     }
-
-    .Footer {
-      a.back-btn {
-        display: block;
-        width: 100%;
-        background-color: #EFEFEF;
-        color: black;
-        padding: 5 0px;
-        margin-top: 20px;
-        text-align: center;
-        border: 1px solid;
-        border-radius: 3px;
-        text-decoration: none;
-        font-family: inherit;
-      }
+  }
+  
+  .Footer {
+    a.back-btn {
+      display: block;
+      width: 100%;
+      background-color: #EFEFEF;
+      color: black;
+      padding: 5 0px;
+      margin-top: 20px;
+      text-align: center;
+      border: 1px solid;
+      border-radius: 3px;
+      text-decoration: none;
+      font-family: inherit;
     }
   }
+  
 }

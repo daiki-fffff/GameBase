@@ -34,22 +34,27 @@ class ImpressionsController < ApplicationController
   end
 
   def edit
+    @impression = Impression.find(params[:id])
   end
 
   def update
-    if @impression.update(impression_params)
-      redirect_to root_path
-    end
+    @impression = Impression.find(params[:id])
+    @impression.update(params.require(:impression).permit(:title, :text))
+    redirect_to root_path
   end
 
   def destroy
-    if @impression.user_id == current_user.id && @impression.destroy
-      flash[:notice] = "削除が完了しました。"
+    # if @impression.user_id == current_user.id && @impression.destroy
+    impression = Impression.find(params[:id])
+      if impression.user_id == current_user.id
+        impression.destroy
+      end
+      # flash[:notice] = "削除が完了しました。"
       redirect_to root_url
-    else
-      flash[:alert] = "削除できませんでした。"
-      redirect_to root_url
-    end
+    # else
+    #   flash[:alert] = "削除できませんでした。"
+    #   redirect_to root_url
+    #end
   end
 
   private

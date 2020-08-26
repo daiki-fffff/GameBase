@@ -19,10 +19,10 @@
             %p=simple_format(impression.text)
       
         .Content.btn
-          = link_to "編集する"
-        -# - if user_signed_in? && current_user.id == @impression.user_id
-          -# = link_to "編集する", edit_impression_path(@impression.id),class:"impression-details-edit__btn"
-          -# = link_to "削除する", impression_path(@impression.id), method: :delete,class:"impression-details-delete__btn"    
+        - if impression.user_id == current_user.id
+          = link_to "編集する","/impressions/#{impression.id}/edit", method: :get
+          = link_to "削除する","/impressions/#{impression.id}", method: :delete
+          
   .Footer
     = link_to "投稿フォームへ", new_impression_path
 

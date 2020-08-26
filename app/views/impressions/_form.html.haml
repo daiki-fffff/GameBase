@@ -1,0 +1,17 @@
+.Body
+  = form_for (@impression) do |f|
+    .Form-group
+      %label ゲームタイトル
+      %span 必須
+      = f.text_field :title 
+
+    .Form-group
+      %label 感想
+      %span 必須
+      = f.text_area :text
+    
+    .Btn
+      = f.submit '投稿する', class:'btn'
+
+  
+  
