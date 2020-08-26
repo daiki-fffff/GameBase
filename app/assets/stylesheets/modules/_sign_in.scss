@@ -5,7 +5,6 @@
   margin-left: 178px;
   margin-right: 178px;
 }
-
 .Body {
   background-color: #f5f5f5;
   height: 100%;
@@ -35,6 +34,11 @@
   }
 
   .Form {
+    padding-top: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     input[submit="text"],
     input[value="ログイン"]{
       background-color:  #3CCACE;
@@ -43,11 +47,19 @@
       border: solid 1px;
       margin-bottom: 40px;
     }
+    a.back-btn {
+      background-color:  #3CCACE;
+      color: white;
+      width: 300px;
+      border: solid 1px;
+      margin-bottom: 40px;
+      text-decoration: none;
+    }
   }
+
   .Footer {
     background-color: #f5f5f5;
-    width: 100vw;
-    height: 128px;
+    height: 100vh;
   }
 }
 

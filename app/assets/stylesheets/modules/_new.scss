@@ -1,4 +1,13 @@
 //投稿フォームのscss
+.Topheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 50px;
+  color: red;
+  font-family: 'Bangers', cursive;
+}
 .Header {
   margin: 0 50px;
   h1 {

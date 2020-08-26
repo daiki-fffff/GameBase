@@ -1,17 +1,32 @@
-.Top{
-  margin: 0 50px;
+.Top {
+  .Topheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 50px;
+    color: red;
+    font-family: 'Bangers', cursive;
+  }
   .Nav {
     ul.Userlist {
       display: flex;
+      padding: 0 300px;
       float: right;
       a {
         text-decoration: none;
-      }
-      li.Userlist {
-        &__login{
-          margin-right: 20px;
-        }
+        border: 1px solid;
+        border-radius: 3px;
+        font-family: inherit;
+        background-color: #efefef;
+        color: black;
+        padding: 5px;
+        padding-right: 10px;
+      } 
+      li.Userlist__login {
+        margin-right: 10px;
       }
     }
+  
   }
 }
