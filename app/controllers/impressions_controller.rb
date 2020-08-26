@@ -1,5 +1,4 @@
 class ImpressionsController < ApplicationController
-  #before_action :ensure_correct_user,{only: [:edit,:update,:destory]}
 
   def index
     if params[:user_id]
@@ -29,7 +28,7 @@ class ImpressionsController < ApplicationController
     @impression = Impression.new(impression_params)
     @impression.save
     if @impression.save
-      redirect_to root_url
+      redirect_to root_url, notice: "投稿しました"
     end
   end
 
@@ -40,21 +39,17 @@ class ImpressionsController < ApplicationController
   def update
     @impression = Impression.find(params[:id])
     @impression.update(params.require(:impression).permit(:title, :text))
-    redirect_to root_path
+    redirect_to root_path, notice: "編集しました"
   end
 
   def destroy
-    # if @impression.user_id == current_user.id && @impression.destroy
     impression = Impression.find(params[:id])
       if impression.user_id == current_user.id
         impression.destroy
-      end
-      # flash[:notice] = "削除が完了しました。"
-      redirect_to root_url
-    # else
-    #   flash[:alert] = "削除できませんでした。"
-    #   redirect_to root_url
-    #end
+      redirect_to root_url, notice: "削除しました"
+    else
+      redirect_to root_url, notice: "削除できませんでした"
+    end
   end
 
   private
