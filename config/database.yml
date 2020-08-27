@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: GameBase_production
-  username: GameBase
+  username: root
   password: <%= ENV['GAMEBASE_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
