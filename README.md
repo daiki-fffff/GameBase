@@ -1,9 +1,9 @@
 # アプリ名
 GAMEBASE  
-#brURL http://54.150.59.230/
-テスト用アカウント
-ニックネーム　test
-メールアドレス　test@test.com
+URL http://54.150.59.230/  
+テスト用アカウント  
+ニックネーム　test  
+メールアドレス　test@test.com  
 パスワード　test123
 
 # 使用技術
