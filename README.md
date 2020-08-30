@@ -1,6 +1,6 @@
 # アプリ名
-GAMEBASE
-URL http://54.150.59.230/
+GAMEBASE  
+#brURL http://54.150.59.230/
 テスト用アカウント
 ニックネーム　test
 メールアドレス　test@test.com
