@@ -31,6 +31,7 @@ HTML5
 
 # デモ　　
 issuesに記載しています。　　
+https://github.com/daiki-fffff/GameBase/issues/10
 
 # 制作背景  
 ゲームを初めてする人、次のゲームを決めかねている人にとってタイトルを選ぶきっかけになることを目標にしています。  
