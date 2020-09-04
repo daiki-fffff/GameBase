@@ -30,7 +30,7 @@ HTML5
 会員登録していない場合は、投稿を閲覧することのみが可能です。  
 
 # デモ　　
-issuesに記載しています。  　　
+issuesに記載しています。  
 https://github.com/daiki-fffff/GameBase/issues/10
 
 # 制作背景  
