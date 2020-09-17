@@ -23,6 +23,8 @@
           = link_to "編集する","/impressions/#{impression.id}/edit", method: :get
           = link_to "削除する","/impressions/#{impression.id}", method: :delete
           
+  %a#topBtn.topBtn{href: "#"} TOP
+
   .Footer
     = link_to "投稿フォームへ", new_impression_path
 
